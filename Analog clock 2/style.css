@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.center{
+    height: 100vh;
+    background: linear-gradient(#192698, #252c2c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    width: 400px;
+    height: 400px;
+    background: #eee;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 10px 10px 15px rgba(0,0,0,.2),
+                inset 10px 10px 15px rgba(0,0,0,.2),
+                -10px -10px 15px rgba(0,0,0,.2),
+                inset -10px 10px 15px rgba(0,0,0,.2);
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999;
+    z-index: 11;
+}
+.hand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+    bottom: 50%;
+    border-radius: 50%;
+    
+
+}
+.hours-hand{
+    width: 8px;
+    height: 20%;
+    background: rgb(20,20,20);
+
+}
+.minutes-hand{
+    width: 6px;
+    height: 30%;
+    background: rgb(20,20,20);
+
+}
+.seconds-hand{
+    width: 4px;
+    height: 40%;
+    background: rgb(109,35,35);
+}
+.clock .mark{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    --rotation: 0deg;
+    transform: rotate(var(--rotation));
+}
+
+.clock .alt-mark{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 15px;
+    background: #999;
+    margin-top: 15px;
+}
+.clock .main-mark{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 20px;
+    background: rgba(14,13,13);
+    margin-top: 10px;
+}
+.clock .mark-1{
+    --rotation: 30deg;
+}
+.clock .mark-2{
+    --rotation: 60deg;
+}
+.clock .mark-3{
+    --rotation: 90deg;
+}
+.clock .mark-4{
+    --rotation: 120deg;
+}
+.clock .mark-5{
+    --rotation: 150deg;
+}
+.clock .mark-6{
+    --rotation: 180deg;
+}
+.clock .mark-7{
+    --rotation: 210deg;
+}
+.clock .mark-8{
+    --rotation: 240deg;
+}
+.clock .mark-9{
+    --rotation: 270deg;
+}
+.clock .mark-10{
+    --rotation: 300deg;
+}
+.clock .mark-11{
+    --rotation: 330deg;
+}
+.clock .mark-12{
+    --rotation: 360deg;
+}
